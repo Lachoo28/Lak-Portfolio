@@ -107,7 +107,7 @@ export const projects: Project[] = [
   ],
   year: "2025",
   role: "Frontend Developer",
-  liveUrl: "https://papaya-fudge-c44550.netlify.app/",
+  liveUrl: "https://belgian-waffle.netlify.app/",
   githubUrl: "#",
   gradient: "from-[#8B5CF6] to-[#5B7FFF]",
 },
