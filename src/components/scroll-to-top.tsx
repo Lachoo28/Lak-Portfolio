@@ -23,7 +23,7 @@ export function ScrollToTop() {
   const handleScroll = (e: React.MouseEvent<HTMLAnchorElement>) => {
     e.preventDefault();
     if (typeof window !== "undefined") {
-      const scrollToSection = (window as any).scrollToSection;
+      const scrollToSection = window.scrollToSection;
       if (scrollToSection) {
         scrollToSection("#home");
       } else {
