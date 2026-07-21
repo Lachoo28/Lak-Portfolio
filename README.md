@@ -44,49 +44,6 @@ Open http://localhost:3000.
 - **Animated stat counters**
 - Fonts: Space Grotesk (display), Inter (body), IBM Plex Mono (numbers/labels)
 
-## Where to edit content
-
-Everything editable lives in **`src/lib/data.ts`**:
-- `profile` — name, tagline, email, social links, resume URL
-- `roles` — the rotating hero roles, each with an icon (`code`/`palette`/`layout`/`server`/`globe`) and accent color
-- `projects` — title, description, tags, category, links, gradient
-- `techStack` — labels shown in the 3D ring
-- `experience` — jobs/roles (vertical timeline)
-- `education` — degrees/certifications (card grid)
-- `stats` — the animated counters
-
-Swap the "Photo placeholder" box in `src/components/about.tsx` for a real
-`<Image />` once you have a photo.
-
-## Structure
-
-```
-src/
-  app/
-    layout.tsx       → fonts, theme + smooth-scroll + cursor providers
-    page.tsx          → assembles all sections, wraps most in <Reveal3D>
-    globals.css       → design tokens (colors, fonts, grid background, tech-ring chip styles)
-  components/
-    nav.tsx, hero.tsx, hero-avatar.tsx, role-flip.tsx, projects.tsx,
-    tech-stack.tsx,
-    experience.tsx, education.tsx, stats.tsx, about.tsx, contact.tsx, footer.tsx
-    custom-cursor.tsx, magnetic.tsx, scramble-text.tsx, reveal-3d.tsx
-    theme-provider.tsx, smooth-scroll.tsx
-  lib/
-    data.ts           → all placeholder content
-public/
-  avatar.png           → your hero illustration
-```
-
-## Next steps (from your original brief, not yet built)
-
-- Dedicated **case study pages** (`/projects/[slug]`) with problem → research → wireframes → design → prototype → development → results
-- Separate **Design Showcase** (Pinterest-style masonry, Figma links) and **Development Showcase** galleries
-- **Command palette** (⌘K) for searching projects/skills/pages
-- **Testimonials** section
-- **Blog** for write-ups
-- Real project images/screenshots (currently gradient placeholders)
-- Swap the `<input>` in Contact for a real form handler (e.g. Resend, Formspree, or an API route)
 
 ## Tech stack
 
