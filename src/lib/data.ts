@@ -93,6 +93,24 @@ export const projects: Project[] = [
     githubUrl: "https://github.com/Lachoo28/SecureShare",
     gradient: "from-[#5B7FFF] to-[#3D5AFE]",
   },
+  {
+  id: "belgian-waffle",
+  title: "Belgian Waffle",
+  description:
+    "A modern restaurant landing page designed for a Belgian waffle brand, featuring an immersive full-screen video hero, smooth scrolling experience, responsive layouts, and visually engaging sections to showcase the menu and brand identity.",
+  category: ["Frontend"],
+  tags: [
+    "HTML",
+    "CSS",
+    "JavaScript",
+    "Responsive Design"
+  ],
+  year: "2025",
+  role: "Frontend Developer",
+  liveUrl: "https://papaya-fudge-c44550.netlify.app/",
+  githubUrl: "#",
+  gradient: "from-[#8B5CF6] to-[#5B7FFF]",
+},
 {
     id: "foodshare",
     title: "FoodShare",
