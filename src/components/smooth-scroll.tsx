@@ -3,6 +3,12 @@
 import { useEffect } from "react";
 import Lenis from "lenis";
 
+declare global {
+  interface Window {
+    scrollToSection?: (href: string) => void;
+  }
+}
+
 export function SmoothScroll({ children }: { children: React.ReactNode }) {
   useEffect(() => {
     const prefersReduced = window.matchMedia(
@@ -23,7 +29,7 @@ export function SmoothScroll({ children }: { children: React.ReactNode }) {
     requestAnimationFrame(raf);
 
     // Global function on window so React components can trigger smooth scroll directly
-    (window as any).scrollToSection = (href: string) => {
+    window.scrollToSection = (href: string) => {
       const targetEl = document.querySelector(href) as HTMLElement;
       if (targetEl) {
         lenis.scrollTo(targetEl, {
@@ -55,7 +61,7 @@ export function SmoothScroll({ children }: { children: React.ReactNode }) {
     document.addEventListener("click", handleAnchorClick);
 
     return () => {
-      delete (window as any).scrollToSection;
+      delete window.scrollToSection;
       document.removeEventListener("click", handleAnchorClick);
       lenis.destroy();
     };
@@ -63,3 +69,4 @@ export function SmoothScroll({ children }: { children: React.ReactNode }) {
 
   return <>{children}</>;
 }
+
