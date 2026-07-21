@@ -9,7 +9,6 @@ import {
   useTransform,
   useReducedMotion,
 } from "framer-motion";
-import { MoveRight } from "lucide-react";
 import { techStack } from "@/lib/data";
 
 const ACCENTS = ["var(--color-accent)", "var(--color-secondary)"];
