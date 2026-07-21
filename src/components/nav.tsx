@@ -40,7 +40,7 @@ export function Nav() {
   const handleScroll = (e: React.MouseEvent<HTMLAnchorElement>, href: string) => {
     e.preventDefault();
     if (typeof window !== "undefined") {
-      const scrollToSection = (window as any).scrollToSection;
+      const scrollToSection = window.scrollToSection;
       if (scrollToSection) {
         scrollToSection(href);
       } else {
