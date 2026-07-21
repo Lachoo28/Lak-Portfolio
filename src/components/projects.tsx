@@ -226,6 +226,7 @@ export function Projects() {
               className="relative max-h-[85vh] max-w-[90vw] overflow-hidden rounded-2xl border border-[var(--color-border)] bg-[var(--color-surface)] p-3 shadow-2xl flex flex-col"
             >
               <div className="relative flex-1 overflow-hidden rounded-lg">
+                {/* eslint-disable-next-line @next/next/no-img-element */}
                 <img
                   src={activeImage.url}
                   alt={activeImage.title}
